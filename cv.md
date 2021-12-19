@@ -14,13 +14,16 @@
 I am 26 years old, I worked as an energy engineer. Only now I realized that I want to become a web developer. So I quit my job and started studying everything related to front-end development. My strengths are persistence and quick learning. I have good communication skills, so I work great in a team. My goal is to become a web developer in a year. This is why I am here.
 
 ---
+
 ## Skills:
 - HTML5
 - CSS3/SASS
 - JavaScript
 - Git/GitHub
 - Figma
+
 ---
+
 ## Code example:
 ```
 function fib(n) {
@@ -35,7 +38,9 @@ function fib(n) {
 }
 alert( fib(77) ); // 5527939700884757
 ```
+
 ---
+
 ## Education:
 University:
 - Bachelor, S. Toraighyrov Pavlodar State University, Pavlodar 
@@ -48,8 +53,10 @@ Courses:
 - Udemy 
     - HTML
     - CSS
-    - JavaScript 
----
+    - JavaScript
+
+------
+
 ## Languages
 - Russian - native speaker
 - English - A2/B1
