@@ -51,5 +51,5 @@ Courses:
     - JavaScript 
 ---
 ## Languages
-- Russian - native
+- Russian - native speaker
 - English - A2/B1
