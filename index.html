@@ -1,12 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="images/icons/fav.png" type="image/png>
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-savanna-dark.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
+    <script defer src="js/index.js"></script>
+    <title>CV Tolegen Timur</title>
 </head>
+
 <body>
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav">
+                <ul class="nav">
+                    <li class="nav__link nav__link--first"><a href="#intro">Home</a></li>
+                    <li class="nav__link"><a href="#about">About</a></li>
+                    <li class="nav__link"><a href="#skills">Skills</a></li>
+                    <li class="nav__link"><a href="#rest">Works</a></li>
+                    <li class="nav__link"><a href="#contats">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section id="intro" class="main__home">
+            <div class="container">
+                <div class="title">
+                    <img class="bg1" src="images/bg/Union1.svg" alt="background">
+                    <h1 class="title__text"><img src="images/header/text.svg" alt="Tolegen Timur">Tolegen Timur</h1>
+                    <div class="title__description">
+                        Engineer + Junior Front-end Developer
+                    </div>
+                    <div class="title__contacts">
+                        <a href="https://github.com/diXrom" target="_blank"><img src="images/icons/git.svg"
+                                alt="git"></a>
+                        <a href="https://discord.gg/MggJbZdy3j" target="_blank"><img src="images/icons/discord.svg"
+                                alt="discord"></a>
+                        <a href="mailto:demigodkz@gmail.com"><img src="images/icons/gmail.svg" alt="mail"></a>
+                        <a href="tel:+77002946700"><img src="images/icons/tel.svg" alt="tel"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="main__about">
+            <div class="container">
+                <div class="about">
+                    <div class="about__img"><img src="images/other/photo.png" alt="Face"></div>
+                    <img class="bg2" src="images/bg/Union2.svg" alt="background">
+                    <div class="about__content content">
+                        <h2 class="content__title">About Me</h2>
+                        <div class="content__text">I am 26 years old, I worked as an energy engineer. Only now I
+                            realized that I want to become a web developer. So I quit my job and started studying
+                            everything related to front-end development. My strengths are persistence and quick
+                            learning. I have good communication skills, so I work great in a team. My goal is to become
+                            a web developer in a year. This is why I am here.</div>
+                        <div class="content_btn"><a target="_blank" href="https://dixrom.github.io/rsschool-cv/cv">SEE MY CV</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="main__skills">
+            <div class="container">
+                <div class="skills">
+                    <img class="bg3" src="images/bg/Union3.svg" alt="background">
+                    <div class="skills__content content">
+                        <h2 class="content__title">Skills</h2>
+                        <div class="content__text">I enjoy creating things that live on the internet, whether that be
+                            websites, applications, or anything in between.</div>
+                        <div class="content__images">
+                            <div class="img1">
+                                <img src="images/other/1.svg" alt="HTML">
+                                <img src="images/other/2.svg" alt="CSS">
+                                <img src="images/other/5.svg" alt="Figma">
+                            </div>
+                            <div class="img2">
+                                <img src="images/other/4.svg" alt="Git">
+                                <img src="images/other/3.svg" alt="JS">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__img"><img src="images/other/skills.png" alt="skills"></div>
+                </div>
+            </div>
+        </section>
+        <section id="rest" class="main__rest">
+            <div class="container">
+                <div class="rest">
+                    <img class="bg4" src="images/bg/Union4.svg" alt="background">
+                    <div class="rest__img"><img src="images/other/slide.png" alt="slide">
+                        <div class="prev"><img src="images/other/prev.png" alt="prev"></div>
+                        <div class="next"><img src="images/other/next.png" alt="next"> </div>
+                    </div>
+                    <div class="rest__content ">
+                        <div class="slider__wrapper">
+                            <div class="slider__inner">
+                                <div class="slider">
+                                    <h2 class="item__title">Code example</h2>
+                                    <pre>
+<code class="language-javascript">
+    function setClock(selector, time) {
+
+        const timer = document.querySelector(selector),
+                    days = document.querySelector('#days'),
+                    hours = document.querySelector('#hours'),
+                    minutes = document.querySelector('#minutes'),
+                    seconds = document.querySelector('#seconds')
+                    timeID = setInterval(upDateClock, 1000);
     
+        function zero(num) {
+            if (num &lt;10) {
+                return `0${num}`;
+            }
+            else {
+                return num;
+            }
+        }
+    
+        function upDateClock() {
+    
+            const t = getTimeRemainig(time);
+            days.innerHTML = zero(t.days);
+            hours.innerHTML = zero(t.hours);
+            minutes.innerHTML = zero(t.minutes);
+            seconds.innerHTML = zero(t.seconds);
+            if (t.total &lt;= 0) {
+                clearInterval(timeID);
+            }
+        }
+    }
+
+</code>
+</pre>
+                                </div>
+                                <div class="slider">
+                                    <h2 class="item__title">Education</h2>
+                                    <div class="item__text">
+                                        <ul>
+                                            <li class="shadow">University:
+                                                <ul>
+                                                    <li>Bachelor, S. Toraighyrov Pavlodar State University, Pavlodar
+                                                        <ul>
+                                                            <li>Electrical Power Engineering</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Master, S. Toraighyrov Pavlodar State University, Pavlodar
+                                                        <ul>
+                                                            <li>Electrical Power Engineering</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="shadow">Courses:
+                                                <ul>
+                                                    <li>CS50 lectures</li>
+                                                    <li>Udemy
+                                                        <ul>
+                                                            <li>HTML</li>
+                                                            <li>CSS</li>
+                                                            <li>JavaScript</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="item">
+                                        <h2 class="item__title">Soft skills</h2>
+                                        <div class="item__text item-shadow">
+                                            <ul>
+                                                <li>Communication</li>
+                                                <li>Critical thinking</li>
+                                                <li>Introspection and self-reflection</li>
+                                                <li>Making decisions</li>
+                                                <li>Managing projects, people and yourself</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h2 class="item__title ">Languages</h2>
+                                        <div class="item__text item-shadow">
+                                            <ul>
+                                                <li>Russian - Fluent</li>
+                                                <li>English - Intermediate</li>
+                                                <li>Kazakh - Pre-Intermediate</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="indicators">
+                            <div class="indicators__count">
+                                <span id="current">01</span>
+                            </div>
+                            <ol class="indicators__list">
+                                <li class="dot" data-slide-to="1"></li>
+                                <li class="dot" data-slide-to="2"></li>
+                                <li class="dot" data-slide-to="3"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contats" class="main__contacts">
+            <div class="container">
+                <div class="contacts">
+                    <div class="contacts__content">
+                        <div class="content__text">Drop me a line. I&nbsp;would like to hear from you.</div>
+                        <div class="content__form">
+                            <form action="#" class="form">
+                                <h2 class="form__title">Get in Touch</h2>
+                                <input class="form__text" type="text" name="name" placeholder="Name" required="">
+                                <input class="form__email" type="email" name="email" placeholder="Email" required="">
+                                <textarea class="form__textarea" name="message" placeholder="Message"></textarea>
+                                <button class="form__btn" type="submit" name="submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__inner__copy"> © 2021 by Tolegen Timur </div>
+                <div class="footer__inner__contants">
+                    <a href="https://github.com/diXrom" target="_blank"><img src="images/icons/git.svg" alt="git"></a>
+                    <a href="https://discord.gg/MggJbZdy3j" target="_blank"><img src="images/icons/discord.svg"
+                            alt="discord"></a>
+                    <a href="mailto:demigodkz@gmail.com"><img src="images/icons/gmail.svg" alt="mail"></a>
+                    <a href="tel:+77002946700"><img src="images/icons/tel.svg" alt="tel"></a>
+                </div>
+                <div class="footer__inner__link"><a href="https://rs.school/js/" target="_blank"><img
+                            src="images/icons/rs.svg" alt="Rs_School"></a></div>
+            </div>
+
+        </div>
+    </footer>
 </body>
+
 </html>
