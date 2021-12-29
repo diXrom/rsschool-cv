@@ -91,6 +91,128 @@
                 </div>
             </div>
         </section>
+        <section id="rest" class="main__rest">
+            <div class="container">
+                <div class="rest">
+                    <img class="bg4" src="images/bg/Union4.svg" alt="background">
+                    <div class="rest__img"><img src="images/other/slide.png" alt="slide">
+                        <div class="prev"><img src="images/other/prev.png" alt="prev"></div>
+                        <div class="next"><img src="images/other/next.png" alt="next"> </div>
+                    </div>
+                    <div class="rest__content ">
+                        <div class="slider__wrapper">
+                            <div class="slider__inner">
+                                <div class="slider">
+                                    <h2 class="item__title">Code example</h2>
+                                    <pre>
+<code class="language-javascript">
+    function setClock(selector, time) {
+
+        const timer = document.querySelector(selector),
+                    days = document.querySelector('#days'),
+                    hours = document.querySelector('#hours'),
+                    minutes = document.querySelector('#minutes'),
+                    seconds = document.querySelector('#seconds')
+                    timeID = setInterval(upDateClock, 1000);
+    
+        function zero(num) {
+            if (num &lt;10) {
+                return `0${num}`;
+            }
+            else {
+                return num;
+            }
+        }
+    
+        function upDateClock() {
+    
+            const t = getTimeRemainig(time);
+            days.innerHTML = zero(t.days);
+            hours.innerHTML = zero(t.hours);
+            minutes.innerHTML = zero(t.minutes);
+            seconds.innerHTML = zero(t.seconds);
+            if (t.total &lt;= 0) {
+                clearInterval(timeID);
+            }
+        }
+    }
+
+</code>
+</pre>
+                                </div>
+                                <div class="slider">
+                                    <h2 class="item__title">Education</h2>
+                                    <div class="item__text">
+                                        <ul>
+                                            <li class="shadow">University:
+                                                <ul>
+                                                    <li>Bachelor, S. Toraighyrov Pavlodar State University, Pavlodar
+                                                        <ul>
+                                                            <li>Electrical Power Engineering</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Master, S. Toraighyrov Pavlodar State University, Pavlodar
+                                                        <ul>
+                                                            <li>Electrical Power Engineering</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="shadow">Courses:
+                                                <ul>
+                                                    <li>CS50 lectures</li>
+                                                    <li>Udemy
+                                                        <ul>
+                                                            <li>HTML</li>
+                                                            <li>CSS</li>
+                                                            <li>JavaScript</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="item">
+                                        <h2 class="item__title">Soft skills</h2>
+                                        <div class="item__text item-shadow">
+                                            <ul>
+                                                <li>Communication</li>
+                                                <li>Critical thinking</li>
+                                                <li>Introspection and self-reflection</li>
+                                                <li>Making decisions</li>
+                                                <li>Managing projects, people and yourself</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <h2 class="item__title ">Languages</h2>
+                                        <div class="item__text item-shadow">
+                                            <ul>
+                                                <li>Russian - Fluent</li>
+                                                <li>English - Intermediate</li>
+                                                <li>Kazakh - Pre-Intermediate</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="indicators">
+                            <div class="indicators__count">
+                                <span id="current">01</span>
+                            </div>
+                            <ol class="indicators__list">
+                                <li class="dot" data-slide-to="1"></li>
+                                <li class="dot" data-slide-to="2"></li>
+                                <li class="dot" data-slide-to="3"></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
