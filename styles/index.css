@@ -802,3 +802,154 @@ a {
   background: #f44336;
   color: #fbfbfb;
 }
+
+.footer {
+  background: url("../images/bg/Union6.svg");
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__inner__copy {
+  color: #fbfbfb;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 33%;
+  flex: 1 1 33%;
+  font-size: 20px;
+}
+
+.footer__inner__contants {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 33%;
+  flex: 1 1 33%;
+}
+
+.footer__inner__contants a img {
+  height: 36px;
+  width: 36px;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.footer__inner__contants a img:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.footer__inner__link {
+  width: 80px;
+  height: 38px;
+}
+
+.footer__inner__link img {
+  display: block;
+  padding: 5px;
+  background: #928a97;
+  border-radius: 5px;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.footer__inner__link img:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+body,
+html {
+  font-family: "Spartan", sans-serif;
+  color: #000c24;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+main {
+  overflow: hidden;
+}
+
+.main__home {
+  position: relative;
+}
+
+.main__about {
+  position: relative;
+}
+
+.main__skills {
+  position: relative;
+}
+
+.main__rest {
+  position: relative;
+}
+
+.main__contacts {
+  background: url("../images/bg/Union5.svg") no-repeat center center/cover;
+}
+
+.bg1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+
+.bg2 {
+  position: absolute;
+  left: 0;
+  top: -522px;
+  z-index: -1;
+}
+
+.bg3 {
+  position: absolute;
+  right: 0;
+  top: -300px;
+  z-index: -1;
+}
+
+.bg4 {
+  position: absolute;
+  left: 0;
+  top: 422px;
+  z-index: -1;
+}
+
+.bg5 {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-width: 1200px) {
+  .rest {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    justify-items: center;
+  }
+  .rest__img {
+    display: none;
+  }
+}
