@@ -5,7 +5,7 @@
 - E-mail: demigodkz@gmail.com
 - Discord: Dixromat#6018
 - GitHub: diXrom
-- Phone: +7(700) 294-67-01
+- Phone: +7(700) 294-67-99
 
 ---
 
