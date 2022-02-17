@@ -1,0 +1,76 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.fixed {
+  position: fixed;
+  background: $dark;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  max-width: 600px;
+  margin: 0;
+  padding: 45px 0px 50px 30px;
+  background: url("../images/header/1.svg") no-repeat left 10px;
+  display: flex;
+  z-index: 100;
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 64px;
+    }
+    &-1 {
+      animation: rise 2s ease-in-out;
+    }
+    &-2 {
+      animation: rise 2s ease-in-out 0.3s backwards;
+    }
+    &-3 {
+      animation: rise 2s ease-in-out 0.5s backwards;
+    }
+    &-4 {
+      animation: rise 2s ease-in-out 0.7s backwards;
+    }
+    &-5 {
+      animation: rise 2s ease-in-out 0.9s backwards;
+    }
+    & a {
+      @extend %btnText;
+      color: $grey;
+      font-weight: 700;
+      position: relative;
+
+      transition: color 0.3s ease;
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $white;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s linear;
+      }
+      &:hover {
+        color: $orange;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__link--first {
+    & a {
+      &::after {
+        background: $dark;
+      }
+    }
+  }
+}

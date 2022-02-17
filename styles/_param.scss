@@ -1,0 +1,48 @@
+$color-main: #000c24;
+$color-secondary: #f44336;
+$color-bg: #5fc0ff;
+$dark: #000c24;
+$white: #fbfbfb;
+$orange: #f44336;
+$grey: #928a97;
+$content-width: 1197px;
+$tablet-width: 768px;
+$mobile-big-width: 414px;
+$mobile-small-width: 320px;
+%largeHead {
+  font-size: 38px;
+  line-height: (46px/38px) * 100%;
+  font-weight: 700;
+  color: inherit;
+}
+%heading1 {
+  font-size: 32px;
+  line-height: (36px/32px) * 100%;
+  font-weight: 700;
+  color: inherit;
+}
+%heading2 {
+  font-size: 24px;
+  line-height: (27px/24px) * 100%;
+  font-weight: 700;
+  color: inherit;
+}
+%body {
+  font-size: 24px;
+  line-height: 170%;
+  font-weight: 400;
+  color: inherit;
+}
+%btnText {
+  font-size: 20px;
+  line-height: (20px/18px) * 100%;
+  font-weight: 400;
+  color: inherit;
+}
+%btn {
+  font-size: 16px;
+  line-height: 129%;
+  font-weight: 400;
+  letter-spacing: 1.25%;
+  color: inherit;
+}
