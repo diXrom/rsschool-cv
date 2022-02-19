@@ -2,7 +2,6 @@
 @import "_param";
 @import "_mixins";
 
-
 @font-face {
   font-family: Merriweather;
   src: url("../assets/fonts/MerriweatherSans-Bold.ttf");
@@ -39,7 +38,8 @@ h2,
 h3 {
   margin: 0;
 }
-ul,ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -91,15 +91,33 @@ main {
 }
 .main__home {
   background: url("../images/bg/Union1.svg") no-repeat left top;
+  @include media-laptop {
+    background-position: -250px top;
+  }
+  @include media-tablet {
+    background-position: -450px top;
+  }
 }
 .main__about {
   background: url("../images/bg/Union2.svg") no-repeat left -382px;
+  @include media-laptop {
+    background-position: -250px -382px;
+  }
+  @include media-tablet {
+    background-position: -450px -382px;
+  }
 }
 .main__skills {
   background: url("../images/bg/Union3.svg") no-repeat right -254px;
+  @include media-tablet {
+    background-position: 100px -254px;
+  }
 }
 .main__rest {
   background: url("../images/bg/Union4.svg") no-repeat left bottom;
+  @include media-laptop {
+    background: none;
+  }
 }
 .main__contacts {
   background: url("../images/bg/Union5.svg") no-repeat center center/cover;

@@ -11,17 +11,27 @@
   background: $white;
 
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: minmax(200px, 400px) minmax(200px, 1fr);
   column-gap: 64px;
   align-items: center;
+  @include media-tablet {
+    grid-template-columns: 1fr;
+  }
   .content__text {
     @extend %largeHead;
+    @include media-laptop {
+      font-size: 28px;
+    }
   }
   .form {
     &__title {
       @extend %heading1;
       color: $orange;
       margin-bottom: 24px;
+      @include media-tablet {
+        margin-top:20px;
+        text-align: center;
+      }
     }
     &__text,
     &__email {

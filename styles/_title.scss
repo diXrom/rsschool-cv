@@ -7,25 +7,33 @@
   @include media-laptop {
     justify-items: center;
   }
+  @include   media-mobile {
+    padding-bottom: 321px;
+  }
+
   color: $white;
   &__text {
     margin-bottom: 16px;
     font-size: 0;
     color: inherit;
     animation: rise 2s ease-in-out;
-    
+    img{
+      max-width: 100%;
+    }
   }
   &__description {
     @extend %heading2;
     margin-bottom: 31px;
     animation: rise 3s ease-in-out;
+    @include media-tablet {
+      font-size: 18px;
+    }
     
   }
   &__contacts {
     ul {
       display: flex;
       li {
-        
         margin-right: 15px;
         a {
           img {

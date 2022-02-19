@@ -1,16 +1,23 @@
 .footer {
-  background: url("../images/bg/Union6.svg");
-
+  background:$dark url("../images/bg/Union6.svg") bottom left;
   &__inner {
     display: flex;
-    height: 100px;
+    min-height:150px;
     justify-content: space-between;
     align-items: center;
+    @include media-tablet {
+      flex-direction: column-reverse;
+      gap:15px;
+    }
     &__copy {
       color: $white;
       flex: 1 1 33%;
+      @include media-tablet {
+        padding-bottom: 10px;
+      }
     }
     &__contants {
+
       flex: 1 1 33%;
       ul {
           display: flex;
@@ -32,6 +39,9 @@
     }
 
     &__link {
+      @include media-tablet {
+        padding-top: 10px;
+      }
       width: 100px;
       height: 50px;
       img {
@@ -45,6 +55,7 @@
           filter: brightness(150%) contrast(155%);
         }
       }
+      
     }
   }
 }

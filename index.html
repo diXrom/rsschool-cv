@@ -27,6 +27,9 @@
                     <li class="nav__link nav__link-4"><a href="#rest">Works</a></li>
                     <li class="nav__link nav__link-5"><a href="#contats">Contacts</a></li>
                 </ul>
+                <div class="burger">
+                    <div class="burger__line"></div>
+                </div>
             </nav>
         </div>
     </header>
@@ -97,39 +100,51 @@
                     <div class="rest__content ">
                         <div class="slider__wrapper">
                             <div class="slider__inner">
+                                <div class="slider projects">
+                                    <h2 class="item__title">My projects</h2>
+                                    <div class="item__text item-shadow">
+                                        <div class="projects__title">Portfolio</div>
+                                        <a href="https://rolling-scopes-school.github.io/dixrom-JSFEPRESCHOOL/portfolio/"
+                                            target="_blank">
+                                            <img class="projects__img show" src="./images/other/portfolio.png"
+                                                alt="Portfolio">
+                                            <div class="projects__text">
+                                                <div>HTML, CSS, JS</div>
+                                                <div>Portfolio website with custom video player, photo catalog</div>
+                                            </div>
+                                        </a>
+                                        <div class="projects__title">Movies-app</div>
+                                        <a href="https://rolling-scopes-school.github.io/dixrom-JSFEPRESCHOOL/movie-app/"
+                                            target="_blank">
+                                            <img class="projects__img" src="./images/other/movie-app.png"
+                                                alt="Movie-app">
+                                            <div class="projects__text">
+                                                <div>HTML, CSS, JS, AJAX</div>
+                                                <div>Movie search site</div>
+                                            </div>
+                                        </a>
+                                        <div class="projects__title">2048-game</div>
+                                        <a href="https://dixrom-2048.netlify.app/" target="_blank">
+                                            <img class="projects__img" src="./images/other/2048.png" alt="2048">
+                                            <div class="projects__text">
+                                                <div>HTML, CSS, JS </div>
+                                                <div>Copy of logic game 2048</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                                 <div class="slider">
                                     <h2 class="item__title">Code example</h2>
                                     <pre>
 <code class="language-javascript">
 function setClock(selector, time) {
-
-    const timer = document.querySelector(selector),
-                days = document.querySelector('#days'),
-                hours = document.querySelector('#hours'),
-                minutes = document.querySelector('#minutes'),
-                seconds = document.querySelector('#seconds')
-                timeID = setInterval(upDateClock, 1000);
-
-    function zero(num) {
-        if (num &lt;10) {
-            return `0${num}`;
+    const getData = async url => {
+        let response = await fetch(url);
+        if (!response.ok) { 
+            throw new Error(response.status)
         }
-        else {
-            return num;
-        }
-    }
-
-    function upDateClock() {
-
-        const t = getTimeRemainig(time);
-        days.innerHTML = zero(t.days);
-        hours.innerHTML = zero(t.hours);
-        minutes.innerHTML = zero(t.minutes);
-        seconds.innerHTML = zero(t.seconds);
-        if (t.total &lt;= 0) {
-            clearInterval(timeID);
-        }
-    }
+        return await response.json();
+    };
 }
 
                                 </code>
@@ -192,17 +207,7 @@ function setClock(selector, time) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="slider projects">
-                                    <h2 class="item__title">My projects</h2>
-                                    <div class="item__text item-shadow">
-                                        <div class="projects__title">Portfolio</div>
-                                        <a href="https://rolling-scopes-school.github.io/dixrom-JSFEPRESCHOOL/portfolio/" target="_blank"><img class="projects__img " src="./images/other/portfolio.png" alt="Portfolio"></a>
-                                        <div class="projects__title">Movies-app</div>
-                                        <a href="https://rolling-scopes-school.github.io/dixrom-JSFEPRESCHOOL/movie-app/" target="_blank"><img class="projects__img" src="./images/other/movie-app.png" alt="Movie-app"></a>
-                                        <div class="projects__title">2048-game</div>
-                                        <a href="https://dixrom-2048.netlify.app/" target="_blank"><img class="projects__img" src="./images/other/2048.png" alt="2048"></a>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="prev"><img src="images/other/left2.svg" alt="prev"></div>

@@ -90,3 +90,25 @@ function accordion() {
     }));
 }
 accordion();
+function showBurgerMenu() {
+    const hamburger = document.querySelector('.burger'),
+        hamburgerNav = document.querySelector('.nav');
+    const toogleMenu = () => {
+        hamburgerNav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        if (hamburger.classList.contains('active')) {
+            document.documentElement.style.overflow = 'hidden';
+        } else {
+            document.documentElement.style.overflow = '';
+        }
+    }
+    hamburger.addEventListener('click', toogleMenu);
+    hamburgerNav.addEventListener('click', (e) => {
+        if (e.target && e.target.closest('.nav__link a')) {
+            hamburgerNav.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.documentElement.style.overflow = '';
+        }
+    });
+}
+showBurgerMenu();
