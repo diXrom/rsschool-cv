@@ -1,0 +1,85 @@
+.contacts {
+  max-width: 100%;
+  display: flex;
+}
+
+.contacts__content {
+  margin: 72px 0;
+  padding: 32px;
+
+  border-radius: 5px;
+  background: $white;
+
+  display: grid;
+  grid-template-columns: minmax(200px, 400px) minmax(200px, 1fr);
+  column-gap: 64px;
+  align-items: center;
+  @include media-tablet {
+    grid-template-columns: 1fr;
+  }
+  .content__text {
+    @extend %largeHead;
+    @include media-laptop {
+      font-size: 28px;
+    }
+  }
+  .form {
+    &__title {
+      @extend %heading1;
+      color: $orange;
+      margin-bottom: 24px;
+      @include media-tablet {
+        margin-top:20px;
+        text-align: center;
+      }
+    }
+    &__text,
+    &__email {
+      width: 100%;
+      margin-bottom: 24px;
+      padding: 9px;
+
+      border-radius: 5px;
+      border: 2px solid black;
+
+      &::placeholder {
+        @extend %body;
+        font-size: 20px;
+        color: $grey;
+      }
+    }
+
+    &__textarea {
+      width: 100%;
+      height: 125px;
+      resize: vertical;
+      margin-bottom: 24px;
+      padding: 9px;
+
+      border-radius: 5px;
+      border: 2px solid black;
+
+      &::placeholder {
+        @extend %body;
+        font-size: 20px;
+        color: $grey;
+      }
+    }
+    &__btn {
+      @extend %btnText;
+      padding: 16px 24px;
+      border-radius: 10px;
+
+      font-size: 16px;
+      background: $dark;
+      color: $white;
+      cursor: pointer;
+      transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+      &:hover {
+        background: $orange;
+        color: $dark;
+      }
+    }
+  }
+}
