@@ -24,7 +24,7 @@
   &__description {
     @extend %heading2;
     margin-bottom: 31px;
-    animation: rise 3s ease-in-out;
+    animation: rise 2.5s ease-in-out .1s;
     @include media-tablet {
       font-size: 18px;
     }
@@ -40,7 +40,7 @@
             height: 46px;
             width: 46px;
             transition: transform 2s ease-in-out;
-            animation: rise 2s ease-in-out, rotate 3s linear infinite 2s;
+            animation: rise 1.5s ease-in-out , rotate 3s linear infinite 2s;
             &:hover {
               filter: brightness(150%) contrast(155%);
               transform: scale(1.4);

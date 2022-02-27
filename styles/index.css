@@ -623,8 +623,8 @@ body {
 
 .title__description {
   margin-bottom: 31px;
-  -webkit-animation: rise 3s ease-in-out;
-          animation: rise 3s ease-in-out;
+  -webkit-animation: rise 2.5s ease-in-out .1s;
+          animation: rise 2.5s ease-in-out .1s;
 }
 
 @media (max-width: 768px) {
@@ -650,8 +650,8 @@ body {
   transition: -webkit-transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
   transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
-  -webkit-animation: rise 2s ease-in-out, rotate 3s linear infinite 2s;
-          animation: rise 2s ease-in-out, rotate 3s linear infinite 2s;
+  -webkit-animation: rise 1.5s ease-in-out , rotate 3s linear infinite 2s;
+          animation: rise 1.5s ease-in-out , rotate 3s linear infinite 2s;
 }
 
 .title__contacts ul li a img:hover {
